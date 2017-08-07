@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+<meta charset="UTF-8">
+<title>Sample website using Bootstrap and ExpressJS</title>
+  
+<!---CDN Links-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/theme1.css">
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12" id="header">
+[[[{
+"name":"header",
+"host":"http://localhost:3001",
+"path":"/widget/header?id={id}&storeid={storeid}",
+"parameters":{"id":1,"storeid":"{storeid}"}
+}]]]
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2" id="leftSider">
+            leftSider
+		</div>
+		<div class="col-md-8" id="centerPanel">
+            centerPanel
+		</div>
+		<div class="col-md-2" id="rightSider">
+            rightSider
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12" id="footer">
+[[[{
+"name":"footer",
+"host":"http://localhost:3001",
+"path":"/widget/footer?id={id}&storeid={storeid}",
+"parameters":{"id":1,"storeid":"{storeid}"}
+}]]]
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{ 
+    "presets": [
+        "es2015"
+    ],
+    "plugins": [
+        "transform-async-to-generator"
+    ],
+    "sourceMaps": true,
+    "retainLines": true,
+    "stage": 2,
+    "optional": ["es7.classProperties", "es7.decorators", "es7.functionBind", "utility.inlineEnvironmentVariables", "es7.asyncFunctions"]
+}
