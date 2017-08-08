@@ -4,7 +4,7 @@ import WebClient from 'javascript-web-client'
 
 class Controller {
     constructor() {
-        this.context = {storeid:1};
+        this.context = {storeid:1,storetype:4};
     }
     async getTemplate(name){
         try {

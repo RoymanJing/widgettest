@@ -9,20 +9,23 @@ app.use("/",router);
   
 router.get("/widget/header",function(req, res){
   console.log(req.url)
-  res.send("this is a header");
+  res.sendFile(path + "header.html");
 });
 router.get("/widget/footer",function(req, res){
   console.log(req.url)
-  res.send( "<div class=\"footer\">this is a footer</di><style>.footer{color:red;}</style>");
+  res.sendFile(path + "footer.html");
 });
-router.get("/widget/banner",function(req, res){
-  res.sendFile(path + "index.html");
+router.get("/widget/center",function(req, res){
+  console.log(req.url)
+  res.sendFile(path + "center.html");
 });
 router.get("/widget/leftsider",function(req, res){
-  res.sendFile(path + "index.html");
+  console.log(req.url)
+  res.sendFile(path + "leftsider.html");
 });
 router.get("/widget/rightsider",function(req, res){
-  res.sendFile(path + "index.html");
+  console.log(req.url)
+  res.sendFile(path + "rightsider.html");
 });
   
 app.use("*",function(req, res){
