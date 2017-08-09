@@ -18,33 +18,33 @@
 [[[{
 "name":"header",
 "host":"http://localhost:3001",
-"path":"/widget/header?id={id}&storeid={storeid}",
-"parameters":{"id":1,"storeid":"{storeid}"}
+"path":"/widget/header",
+"parameters":{"itemList":["11-11-111","00-111-111"],"storeid":"{storeid}"}
 }]]]
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-2" id="leftSider">
 [[[{
-"name":"header",
+"name":"left",
 "host":"http://localhost:3001",
-"path":"/widget/leftsider?id={id}&storeid={storeid}",
+"path":"/widget/leftsider",
 "parameters":{"id":1,"storeid":"{storeid}"}
 }]]]
 		</div>
 		<div class="col-md-8" id="centerPanel">
 [[[{
-"name":"header",
+"name":"center",
 "host":"http://localhost:3001",
-"path":"/widget/center?id={id}&storeid={storeid}&storetyep={storetype}&count={count}",
+"path":"/widget/center",
 "parameters":{"id":2,"storeid":"{storeid}","count":20,"storetype":"{storetype}"}
 }]]]
 		</div>
 		<div class="col-md-2" id="rightSider">
 [[[{
-"name":"header",
+"name":"right",
 "host":"http://localhost:3001",
-"path":"/widget/rightsider?id={id}&storeid={storeid}",
+"path":"/widget/rightsider",
 "parameters":{"id":1,"storeid":"{storeid}"}
 }]]]
 		</div>
@@ -54,7 +54,7 @@
 [[[{
 "name":"footer",
 "host":"http://localhost:3001",
-"path":"/widget/footer?id={id}&storeid={storeid}",
+"path":"/widget/footer",
 "parameters":{"id":1,"storeid":"{storeid}"}
 }]]]
 		</div>

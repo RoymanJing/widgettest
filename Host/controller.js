@@ -40,12 +40,28 @@ class Controller {
         return response.body
     }
 
+    isArrayFn(value){  
+        if (typeof Array.isArray === "function") {  
+            return Array.isArray(value);      
+        }else{  
+            return Object.prototype.toString.call(value) === "[object Array]";      
+        }  
+    }
+
     initParameter(widget){;
         let paras = widget.parameters
         let keys = Object.keys(paras)
         let path = widget.path
         keys.forEach((name, index) => {
-            path = path.replace(`{${name}}`,paras[name])
+            let val = paras[name]
+            if(this.isArrayFn(val)){
+                val = encodeURIComponent(val.join(","));
+            }
+            else if(!((typeof val=='string') && val.constructor==String && val.indexOf("{")==0 && val.indexOf("}")==val.length-1)) {
+                val = encodeURIComponent(val)
+            }
+
+            path = path + (path.indexOf("?")<0?"?":"&") +`${name}=`+ val
         })
 
         keys = Object.keys(this.context)
