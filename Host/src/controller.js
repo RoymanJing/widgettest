@@ -8,7 +8,7 @@ class Controller {
     }
     async getTemplate(name){
         try {
-            let file = await Fs.readFileAsync(__dirname + name)
+            let file = await Fs.readFileAsync(process.cwd() + name)
             return String(file)
         } catch (e) {
             console.log('error: ', e)
@@ -28,8 +28,8 @@ class Controller {
     }
     // {
     //     "name":"header",
-    //     "host":"http://api/webparts",
-    //     "path":"/header?id={id}&storeid={storeid}",
+    //     "host":"http://apis.newegg.org",
+    //     "path":"/webparts/header",
     //     "parameters":{"id":1,"storeid":"{storeid}"},
     // }
     async getWidget(widgetString) {

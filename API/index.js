@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var router = express.Router();
   
-var path = __dirname + "/views/";
+var path = process.cwd() + "/views/";
 
 app.use(express.static('public'))
 app.use("/",router);
