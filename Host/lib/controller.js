@@ -28,7 +28,7 @@ Controller = function () {
         }
         // {
         //     "name":"header",
-        //     "host":"http://apis.newegg.org",
+        //     "host":"http://localhost:3001",
         //     "path":"/webparts/header",
         //     "parameters":{"id":1,"storeid":"{storeid}"},
         // }
